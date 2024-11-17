@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>My Page - 개인정보</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/mypage.css' %}" />
+    <style>
+        main.container h1 {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'menu.html' %}
+    <main class="container" id="mypage-container">
+    <h2>My Page</h2>
+    <div class="info">
+        <p class="info-item"><strong>이름</strong> <span>{{ name }}</span></p>
+        <p class="info-item"><strong>아이디 </strong><span>{{ user_id }}</span></p>
+        <p class="info-item"><strong>비밀번호 </strong><span>{{ password }}</span></p>
+        <p class="info-item"><strong>생년월일 </strong><span>{{ birth_date }}</span></p>
+        <p class="info-item"><strong>이메일 </strong><span>{{ email }}</span></p>
+        <p class="info-item"><strong>도시 </strong><span>{{ region }}</span></p>
+        <p class="info-item"><strong>지역 </strong><span>{{ district }}</span></p>
+        
+    </div>
+    <!-- 개인정보 수정 버튼 -->
+    <a href="{% url 'edit_mypage' %}" class="edit-button">개인정보 수정</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+#mypage-container {
+    max-width: 300px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* body 설정 - 모든 페이지에서 사용됨 (home.html, menu.html, sign_up.html) */
+body {
+    background: linear-gradient(45deg, #d5d2d2, #d5d2d2);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+main.container {
+    background: white;
+    min-width: 380px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.info{
+    padding-left: 10px;
+    padding: 10px 10px; /* 상하좌우 여백 추가 */
+    margin-bottom: 20px; /* 정보 전체 영역과 다른 요소 간 여백 추가 */
+    
+}
+.info-item span {
+    display: block; /* 값은 제목과 다른 줄에 표시 */
+    background: linear-gradient(45deg, #e9e7e7, #e2dcdc);
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    min-height: 5vh;
+    min-width: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: auto;
+    padding-left: 10px;
+}
+.info-item strong {
+    font-weight: bold; /* 제목 부분을 굵게 */
+    display: block; /* 제목을 별도의 줄에 표시 */
+    margin-bottom: 10px; /* 제목과 값 사이의 간격 */
+}
+.info-item {
+    margin-bottom: 15px; /* 각 항목 간 간격 */
+    font-size: 16px; /* 글자 크기 */
+    display: block; /* p 태그로 감싸서 새 줄로 표시 */
+}

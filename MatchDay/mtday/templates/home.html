@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/main_visual.css' %}">
+    <script src="{% static 'JS/region.js' %}"></script>
+    <script src="{% static 'JS/mainv.js' %}"></script>
+   
+    <style>
+        div#ww_378b721c8d0cd{
+            position: relative;
+            bottom : 43px ;
+            
+        }
+        .more-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            margin: 10px;
+            background-color: #898484;
+            color: #232222;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div id="ww_378b721c8d0cd" v='1.3' loc='id' a='{"t":"ticker","lang":"ko","sl_lpl":1,"ids":[],"font":"Times","sl_ics":"one","sl_sot":"celsius","cl_bkg":"#616161","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"rgba(200,180,118,1)","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/seoul/30_days/" id="ww_378b721c8d0cd_u" target="_blank">Seoul 30 day forecast</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_378b721c8d0cd"></script>
+    <section class="main-visual" style="position: absolute; top: 160px; left: 100px; width: 42%; margin: 20px, 0; padding: 0; display:flex; vertical-align: top;">
+        <div class="slider">
+            <div class="slide">1</div>
+            <div class="slide">2</div>
+            <div class="slide">3</div>
+            <div class="slide">4</div>
+            <div class="slide">5</div>
+        </div>
+        <div class="controls">
+            <button class="control-btn prev">&#10094;</button>
+            <button class="control-btn next">&#10095;</button>
+        </div>
+    </section> 
+    <section class="right-screen" style="position: absolute; top: 160px; right: 100px; width: 42%; margin: 20px, 0; padding: 0; display: inline-block; vertical-align: top;">
+        <br><h2>지동리</h2>
+        <p></p>
+        <a href="{% url 'lcl' %}">
+            <button class="more-btn">+</button>
+        </a>
+    </section>
+    <section class="right-screen" style="position: absolute; top: 570px; left: 100px; width: 42%; margin: 20px, 0; padding: 0; display: inline-block;">
+        <br><h2>체시</h2>
+        <p></p>
+        <a href="{% url 'sports' %}">
+            <button class="more-btn">+</button>
+        </a>
+        
+    </section>
+    <section class="right-screen" style="position: absolute; top: 570px; right: 100px; width: 42%; margin: 20px, 0; padding: 0; display: inline-block; vertical-align: top;">
+        <br><h2>게시판</h2>
+        <p></p>
+        <a href="{% url 'board' %}">
+            <button class="more-btn">+</button>
+        </a>
+    </section>
+    <div style="height: 1100px;"></div>
+
+   
+   {% include 'bottom.html' %}
+</body>
+</html>

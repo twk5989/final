@@ -1,0 +1,52 @@
+.main-visual {
+    position: relative;
+    width: 4%; /* 전체 페이지의 50% 너비 */
+    height: 50vh;
+    display: inline-block; /* inline-block 유지 */
+    vertical-align: top; /* 인라인 블록 요소의 세로 정렬 */
+    overflow: hidden; /* 슬라이더가 넘치는 부분을 숨기기 */
+    min-height: 50vh;
+    min-width: 42%;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%; /* 모든 슬라이드를 가로로 배치하기 위해 넓게 설정 */
+}
+
+.slide {
+    min-width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: white;
+    background-color: #333;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.control-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+section.right-screen {
+    background: rgb(177, 176, 176);
+    min-width: 42%;
+    min-height: 50vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    height: 50vh;
+}
